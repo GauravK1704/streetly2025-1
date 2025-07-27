@@ -34,6 +34,8 @@ import {
   AlertCircle
 } from "lucide-react";
 import { DeliveryMobileNav } from "@/components/DeliveryMobileNav";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useToast } from "@/hooks/use-toast";
 
 // Google Maps API Key
@@ -318,9 +320,8 @@ const DeliveryPartnerDashboard = () => {
             
             {/* Header Actions */}
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="sm" className="h-9 w-9 p-0 hover:bg-accent/50">
-                <Languages className="h-4 w-4" />
-              </Button>
+              <LanguageSelector />
+              <ThemeToggle />
               <Button variant="ghost" size="sm" className="h-9 w-9 p-0 relative hover:bg-accent/50">
                 <Bell className="h-4 w-4" />
                 <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-destructive rounded-full animate-pulse"></div>
